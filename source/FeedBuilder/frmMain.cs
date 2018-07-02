@@ -308,6 +308,11 @@ namespace FeedBuilder
 					task.SetAttribute("fileSize", fileInfoEx.FileInfo.Length.ToString(CultureInfo.InvariantCulture));
 					if (!string.IsNullOrEmpty(fileInfoEx.FileVersion)) task.SetAttribute("version", fileInfoEx.FileVersion);
 
+					// Description
+					var description = doc.CreateElement("Description");
+					description.InnerText = fileInfoEx.RelativeName;
+					task.AppendChild(description);
+
 					var conds = doc.CreateElement("Conditions");
 					XmlElement cond;
 
