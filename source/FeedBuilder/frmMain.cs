@@ -103,7 +103,8 @@ namespace FeedBuilder
 			chkIgnoreVsHost.Checked = Settings.Default.IgnoreVsHosting;
 			chkCopyFiles.Checked = Settings.Default.CopyFiles;
 			chkCleanUp.Checked = Settings.Default.CleanUp;
-			txtAddExtension.Text = Settings.Default.AddExtension;
+			//txtAddExtension.Text = Settings.Default.AddExtension;
+			txtAddExtension.Text = "";
 
 			if (Settings.Default.IgnoreFiles == null) Settings.Default.IgnoreFiles = new StringCollection();
 			ReadFiles();

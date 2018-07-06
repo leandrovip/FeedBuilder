@@ -96,7 +96,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NAppUpdate.Framework, Version=0.5.1.0, Culture=neutral, PublicKeyToken=d1f1d1f19f9e5a56, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NAppUpdateBR.1.0.1\lib\net462\NAppUpdate.Framework.dll</HintPath>
+      <HintPath>..\..\packages\NAppUpdateBR.1.0.3\lib\net462\NAppUpdate.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -150,10 +150,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

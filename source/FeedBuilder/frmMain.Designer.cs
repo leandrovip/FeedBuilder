@@ -160,7 +160,7 @@ namespace FeedBuilder
             // 
             // sfdFeedXML
             // 
-            this.sfdFeedXML.DefaultExt = "xml";
+            this.sfdFeedXML.DefaultExt = "";
             this.sfdFeedXML.Filter = "XML Files (*.xml)|*.xml|All Files (*.*)|*.*";
             this.sfdFeedXML.Title = "Select the location to save your NauXML file:";
             // 
