@@ -323,7 +323,7 @@ namespace FeedBuilder
 					conds.AppendChild(cond);
 
 					//Version
-					if (chkVersion.Checked && !string.IsNullOrEmpty(fileInfoEx.FileVersion))
+					if (chkVersion.Checked && !string.IsNullOrEmpty(fileInfoEx.FileVersion) && !filename.Contains(".config"))
 					{
 						cond = doc.CreateElement("FileVersionCondition");
 						cond.SetAttribute("type", "or");
