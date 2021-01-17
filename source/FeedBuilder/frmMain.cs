@@ -325,11 +325,14 @@ namespace FeedBuilder
 					//Version
 					if (chkVersion.Checked && !string.IsNullOrEmpty(fileInfoEx.FileVersion) && !filename.Contains(".config"))
 					{
-						cond = doc.CreateElement("FileVersionCondition");
-						cond.SetAttribute("type", "or");
-						cond.SetAttribute("what", "below");
-						cond.SetAttribute("version", fileInfoEx.FileVersion);
-						conds.AppendChild(cond);
+						if (!filename.ToLower().Contains(".xsd"))
+						{
+							cond = doc.CreateElement("FileVersionCondition");
+							cond.SetAttribute("type", "or");
+							cond.SetAttribute("what", "below");
+							cond.SetAttribute("version", fileInfoEx.FileVersion);
+							conds.AppendChild(cond);
+						}
 					}
 
 					//Size
