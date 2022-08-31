@@ -325,7 +325,7 @@ namespace FeedBuilder
 					//Version
 					if (chkVersion.Checked && !string.IsNullOrEmpty(fileInfoEx.FileVersion) && !filename.Contains(".config"))
 					{
-						if (!filename.ToLower().Contains(".xsd"))
+						if (!filename.ToLower().Contains(".xsd") && !filename.ToLower().Contains(".vip"))
 						{
 							cond = doc.CreateElement("FileVersionCondition");
 							cond.SetAttribute("type", "or");
